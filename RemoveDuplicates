@@ -11,6 +11,17 @@ int removeDuplicates(int* nums, int numsSize) {
     return ++index;
 }
 
+int removeDuplicatesII(int* nums, int numsSize) {
+    if (numsSize<3) return numsSize;
+    int index = 1;
+    for (int i = 2; i < numsSize; i++){
+        if (nums[i] != nums[index-1]){
+            nums[++index] = nums[i];
+        } 
+    }
+    return ++index;
+}
+
 void printList(int* list, int num){
   for(int i = 0; i < num; i++){
     printf("%d ", list[i]);
@@ -31,5 +42,17 @@ int main () {
   list[8] = 7;
   list[9] = 7;
   printList(list, removeDuplicates(list, size));
+  int* listII = (int*)malloc(10*sizeof(int));
+  list[0] = 1;
+  list[1] = 1;
+  list[2] = 3;
+  list[3] = 3;
+  list[4] = 3;
+  list[5] = 4;
+  list[6] = 7;
+  list[7] = 7;
+  list[8] = 7;
+  list[9] = 7;
+  printList(listII, removeDuplicatesII(listII, size));
   return 0;
 }
