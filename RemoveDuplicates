@@ -43,16 +43,16 @@ int main () {
   list[9] = 7;
   printList(list, removeDuplicates(list, size));
   int* listII = (int*)malloc(10*sizeof(int));
-  list[0] = 1;
-  list[1] = 1;
-  list[2] = 3;
-  list[3] = 3;
-  list[4] = 3;
-  list[5] = 4;
-  list[6] = 7;
-  list[7] = 7;
-  list[8] = 7;
-  list[9] = 7;
+  listII[0] = 1;
+  listII[1] = 1;
+  listII[2] = 3;
+  listII[3] = 3;
+  listII[4] = 3;
+  listII[5] = 4;
+  listII[6] = 7;
+  listII[7] = 7;
+  listII[8] = 7;
+  listII[9] = 7;
   printList(listII, removeDuplicatesII(listII, size));
   return 0;
 }
